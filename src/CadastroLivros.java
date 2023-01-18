@@ -5,12 +5,10 @@ public class CadastroLivros {
         autor.setEmail("mariohaha@gmail.com");
         autor.setCpf("127.0.0.1");
 
-        Livro livro = new Livro();
+        Livro livro = new Livro(autor);
         livro.setNome("Logica da programacao");
         livro.setDescricao("Crie seus programas em Java");
         livro.setValor(59.90);
-        livro.setIsbn("998-87-66554-32-1");
-        livro.setAutor(autor);
 
         System.out.println(livro.mostrarDetalhes());
         System.out.println("Valor atual: " + livro.getValor());

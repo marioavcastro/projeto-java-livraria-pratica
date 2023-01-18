@@ -5,6 +5,13 @@ public class Livro {
     private String isbn;
     private Autor autor;
 
+    public Livro(Autor autor){
+        this();
+        this.autor = autor;
+    }
+    public Livro(){
+        this.isbn = "000-00-00000-00-0";
+    }
     void setValor(double valor){
         this.valor = valor;
     }
@@ -52,6 +59,13 @@ public class Livro {
         return true;
     }
     String mostrarDetalhes(){
-     return nome + " " + descricao + " " + valor;
+     return "Nome: " + nome + "\n"
+             + "Descricao: " + descricao + "\n"
+             + "Valor: " + valor + "\n"
+             + "ISBN: " + isbn + "\n"
+             + "Mostrando os detalhes do autor: " + "\n"
+             + "Nome do Autor: " + autor.getNome() + "\n"
+             + "Email: " + autor.getEmail() + "\n"
+             + "CPF: " + autor.getCpf();
     }
 }
